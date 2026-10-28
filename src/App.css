@@ -1,0 +1,524 @@
+:root {
+  --bg-dark: #0d0d0d;
+  --card-bg: #181818;
+  --accent-yellow: #f59e0b;
+  --text-light: #ffffff;
+  --text-muted: #9ca3af;
+  --border-color: #27272a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root, .app-container {
+  min-height: 100vh;
+  width: 100% !important;
+  max-width: none !important;
+  background-color: var(--bg-dark);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* TOP NAVBAR */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #141414;
+  padding: 16px 40px;
+  width: 100% !important;
+  border-bottom: 1px solid var(--border-color);
+  margin: 0 !important;
+}
+
+.nav-left {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-box input {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #000;
+  color: white;
+  width: 220px;
+  font-size: 0.85rem;
+}
+
+.cart-icon-btn {
+  background: #1e1e1e;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon-btn:hover {
+  border-color: var(--accent-yellow);
+}
+
+/* MAIN CONTENT CONTAINER */
+.main-content {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 30px 40px !important;
+  margin: 0 !important;
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #151515;
+  border-radius: 16px;
+  padding: 40px 50px;
+  margin: 0 0 40px 0 !important;
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.hero-text-content {
+  max-width: 550px;
+}
+
+.hero-text-content h1 {
+  font-size: 2.8rem;
+  margin: 0 0 12px 0;
+  color: var(--accent-yellow);
+}
+
+.hero-text-content p {
+  color: #9ca3af;
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.shop-now-btn {
+  background: var(--accent-yellow);
+  color: black;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-image-card {
+  width: 360px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.hero-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECTIONS & PRODUCT GRID */
+.section-block {
+  margin-bottom: 40px;
+  width: 100% !important;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+  color: white;
+  font-weight: 600;
+}
+
+.list-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.list-controls-right {
+  display: flex;
+  gap: 10px;
+}
+
+.category-select {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #181818;
+  color: white;
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+/* BERDENG KULAY NG ADD NEW BUTTON */
+.add-new-btn {
+  background: #10b981;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.add-new-btn:hover {
+  background: #059669;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+  width: 100% !important;
+}
+
+.product-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-image-wrapper {
+  height: 170px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.card-image-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card-info {
+  padding: 14px;
+}
+
+.card-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 0.95rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* PUTING KULAY NG PRESYO PARA DI HALATA NI SIR */
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* MODALS */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box, .modal-detail-box {
+  background: #181818;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 480px;
+  border: 1px solid var(--accent-yellow);
+}
+
+.modal-detail-box {
+  max-width: 620px;
+}
+
+.modal-detail-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-img-container {
+  background: white;
+  height: 200px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.modal-img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.modal-detail-info h2 {
+  margin: 0 0 6px 0;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.modal-cat {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.modal-desc {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  margin-bottom: 8px;
+}
+
+.modal-specs {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.modal-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--accent-yellow);
+  margin-bottom: 12px;
+}
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.qty-controls button {
+  background: #27272a;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.qty-controls span {
+  padding: 0 12px;
+}
+
+.subtotal-display {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #e4e4e7;
+}
+
+.modal-action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.add-cart-btn {
+  background: var(--accent-yellow);
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.close-modal-btn {
+  background: #27272a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: #09090b;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cancel-btn {
+  background: #27272a;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #10b981;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-card {
+  position: relative;
+}
+
+.card-low-stock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ef4444;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.product-card.low-stock-card {
+  border: 1px solid #ef4444 !important;
+}
+
+.product-card {
+  position: relative;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.product-card.low-stock {
+  border: 1px solid #ef4444 !important;
+}
+
+.card-image-wrapper {
+  position: relative;
+}
+
+.low-stock-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.modal-low-stock-banner {
+  background-color: rgba(127, 29, 29, 0.6);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
